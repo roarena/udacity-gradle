@@ -13,7 +13,6 @@ import com.rodrigocamara.joketeller.TheJoker;
 
 import javax.inject.Named;
 
-/** An endpoint class we are exposing */
 @Api(
         name = "myApi",
         version = "v1",
@@ -24,12 +23,13 @@ import javax.inject.Named;
         )
 )
 public class MyEndpoint {
+    private static final String GCE_MESSAGE = "From Joke GCE Server:\n";
+    private static final String API_METHOD_NAME = "wakeJoker";
 
-    /** A simple endpoint method that takes a name and says Hi back */
-    @ApiMethod(name = "wakeJoker")
+    @ApiMethod(name = API_METHOD_NAME)
     public MyBean tellJoke() {
         MyBean response = new MyBean();
-        response.setData("From Joke GCE Server:\n" + TheJoker.tellJoke());
+        response.setData(GCE_MESSAGE + TheJoker.tellJoke());
         return response;
     }
 
