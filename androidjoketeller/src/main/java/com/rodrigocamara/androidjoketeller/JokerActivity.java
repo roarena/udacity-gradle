@@ -1,12 +1,12 @@
 package com.rodrigocamara.androidjoketeller;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class JokerActivity extends AppCompatActivity {
     private TextView tvJoke;
-    private static final String JOKE_EXTRA = "joke_extra";
+    public static final String JOKE_EXTRA = "joke_extra";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

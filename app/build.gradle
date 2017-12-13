@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "27.0.1"
 
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
@@ -25,7 +25,12 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.google.android.gms:play-services-ads:9.8.0'
     compile project(":jokeTeller")
+    compile project(path: ':backend', configuration: 'android-endpoints')
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.http-client:google-http-client-android:1.23.0'
+    compile 'com.google.http-client:google-http-client-android:1.23.0'
+    compile project(path: ':androidjoketeller')
 }
