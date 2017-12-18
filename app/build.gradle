@@ -35,13 +35,13 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
     compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.google.android.gms:play-services-ads:9.8.0'
+    freeVersionCompile 'com.google.android.gms:play-services-ads:9.8.0'
+
     compile project(":jokeTeller")
     compile project(path: ':backend', configuration: 'android-endpoints')
-    compile 'com.google.api-client:google-api-client:1.23.0'
-    compile 'com.google.http-client:google-http-client-android:1.23.0'
-    compile 'com.google.http-client:google-http-client-android:1.23.0'
+
     compile project(path: ':androidjoketeller')
 
     testCompile 'junit:junit:4.12'
