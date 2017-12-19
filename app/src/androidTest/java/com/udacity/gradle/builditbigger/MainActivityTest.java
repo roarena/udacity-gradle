@@ -32,7 +32,9 @@ public class MainActivityTest {
 
         onView(withId(R.id.btnJoke)).perform(click());
 
+
+        //Timeout is the default response from local GCE if the joke isn't retrieved.
         onView(withId(R.id.tvJoke))
-                .check(matches(not(withText(""))));
+                .check(matches(not(withText("timeout"))));
     }
 }
